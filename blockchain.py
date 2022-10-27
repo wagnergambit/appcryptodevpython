@@ -78,10 +78,13 @@ def get_chain():
     response = {'chain': blockchain.chain,
                 'lenght': len(blockchain.chain)}   
     return jsonify(response), 200
-    
-port = int(os.environ.get("PORT", 5000))
-    
-app.run(host= '0.0.0.0', port=port)   
+
+def main():
+    port = int(os.environ.get("PORT", 5000))    
+    app.run(host= '0.0.0.0', port=port)  
+
+if __name__ == "__main__":
+    main() 
     
     
     
