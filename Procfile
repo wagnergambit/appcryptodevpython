@@ -1,1 +1,1 @@
-web: python blockchain.py runserver 0.0.0.0:process.env.port || 5000
+web: python blockchain.py runserver 0.0.0.0:5000

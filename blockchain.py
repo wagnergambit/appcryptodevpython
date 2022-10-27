@@ -1,6 +1,7 @@
 import datetime
 import hashlib
 import json
+import os
 
 from flask import Flask, jsonify
 
@@ -78,8 +79,9 @@ def get_chain():
                 'lenght': len(blockchain.chain)}   
     return jsonify(response), 200
     
+port = int(os.environ.get("PORT", 5000))
     
-app.run(host= '0.0.0.0', port=5000)   
+app.run(host= '0.0.0.0', port=port)   
     
     
     
